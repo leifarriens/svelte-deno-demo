@@ -37,11 +37,12 @@ jobs:
         uses: pnpm/action-setup@v2
         with:
           version: latest
-          run_install: true
+          run_install: |
+            - recursive: true
+              args: [--frozen-lockfile, --strict-peer-dependencies]
 
       - name: Build site
         run: pnpm build
-        working-directory: build
 
       - name: Deploy to Deno Deploy
         uses: denoland/deployctl@v1
