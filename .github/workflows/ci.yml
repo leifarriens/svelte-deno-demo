@@ -48,4 +48,5 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: svelte-deno-demo
-          entrypoint: build/index.js
+          entrypoint: index.js
+          root: build
