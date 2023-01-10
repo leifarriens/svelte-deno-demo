@@ -1,3 +1,8 @@
+<script>
+	/** @type {import('./$types').PageData} */
+	export let data;
+</script>
+
 <svelte:head>
 	<title>svelte-deno-demo</title>
 	<link
@@ -12,5 +17,6 @@
 		<p class="text-xl">
 			Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation
 		</p>
+		<p>{data.now}</p>
 	</section>
 </main>
